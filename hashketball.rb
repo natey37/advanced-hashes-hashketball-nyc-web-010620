@@ -237,4 +237,16 @@ def winning_team
   return win_team
 end 
 
-def player
+def player_with_the_longest_name
+  names = []
+  game_hash.each do |home_or_away, team|
+    team.each do |attribute, data|
+      if attribute == :players 
+        data.each do |player|
+          names << player[:player_name]
+        end 
+      end 
+    end 
+  end 
+  names.map{|name| name.split}.max{|x| x.count}.join(" ")
+end 
