@@ -224,6 +224,7 @@ def winning_team
   win_team = ""
   game_hash.each do |home_or_away, team|
     team_points = 0 
-    team = 
+    team = team[:team_name]
+    team.each 
         
           
