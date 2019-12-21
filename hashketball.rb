@@ -199,3 +199,22 @@ def player_stats(player_name)
   player.delete(:player_name) 
   player
 end 
+
+def most_points_scored
+  name = nil 
+  points = 0 
+  game_hash.each home_or_away, team|
+    team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+          most_points = player[:points]
+          if most_points > points
+             points = most_points
+             name = player[:player_name]
+          end 
+        end 
+      end 
+    end 
+   end 
+   name
+end 
