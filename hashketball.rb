@@ -237,7 +237,7 @@ def winning_team
   return win_team
 end 
 
-def player_with_the_longest_name
+def player_with_longest_name
   names = []
   game_hash.each do |home_or_away, team|
     team.each do |attribute, data|
