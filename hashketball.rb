@@ -230,6 +230,8 @@ def winning_team
       end 
     win_team, total_points = team, team_points if team_points > total_points
   end 
+  return win_team
+end 
         
       
         
