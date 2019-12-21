@@ -220,10 +220,10 @@ def most_points_scored
 end 
 
 def winning_team
-  brooklyn = "Brooklyn Nets"
-  charlotte = "Charlotte Hornets"
-    game_hash.each do |home_or_away, team|
-      team.each do |attribute, data|
-        
+  total_points = 0 
+  win_team = ""
+  game_hash.each do |home_or_away, team|
+    team_points = 0 
+    team = 
         
           
