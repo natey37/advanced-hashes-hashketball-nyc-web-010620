@@ -225,9 +225,11 @@ def winning_team
   game_hash.each do |home_or_away, team|
     team_points = 0 
     team = team[:team_name]
-      team[:players].each do |player|
-        team_points += player[:points]
-      end 
+    team.each do |attribute, data|
+      if attribute == :players
+        data.each do |player|
+         team_points += player[:points]
+      end
     win_team, total_points = team, team_points if team_points > total_points
   end 
   return win_team
