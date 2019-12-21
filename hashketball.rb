@@ -226,7 +226,7 @@ def winning_team
     team_points = 0 
     team = team[:team_name]
     team[:players].each do |player|
-      total_points += player[:points]
+      team_points += player[:points]
       
         
           
