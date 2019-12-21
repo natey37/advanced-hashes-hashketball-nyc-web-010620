@@ -175,6 +175,19 @@ def player_numbers(team_name)
   jersey_numbers
 end 
 
+def player_largest_shoe_size 
+  shoe sizes = []
+  game_hash.each do |home_or_away, team|
+    team.each do |attribute, data|
+      if attribute == :players
+        shoe_sizes << data[:shoe]
+      end 
+    end 
+  end 
+  shoe_sizes
+end 
+def big_shoe_rebounds
+end
 
 def player_stats(player_name)
   player = get_player_stats(player_name)
