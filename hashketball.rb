@@ -250,3 +250,16 @@ def player_with_longest_name
   end 
   names.sort_by{|word| word.length}[-1]
 end 
+
+def long_name_steals_a_ton?
+  longest_name = player_with_longest_name
+  steals = 0 
+  game_hash.each do |home_or_away, team|
+    team.each do |attribute, data|
+      if attribute == :players 
+        data.each do |player|
+          players_steals = player[:steals]
+          players_name = player[:player_name]
+          if players_steals > steals && 
+            steals ==
+end 
