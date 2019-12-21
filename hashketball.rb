@@ -223,5 +223,5 @@ def winning_team
   brooklyn = []
     game_hash.each do |home_or_away, team|
       team.each do |attribute, data|
-        if attribute == :team_name
+        
           
