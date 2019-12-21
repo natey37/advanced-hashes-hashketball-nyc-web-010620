@@ -203,7 +203,7 @@ end
 def most_points_scored
   name = nil 
   points = 0 
-  game_hash.each do home_or_away, team|
+  game_hash.each do |home_or_away, team|
     team.each do |attribute, data|
       if attribute == :players
         data.each do |player|
